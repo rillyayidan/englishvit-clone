@@ -575,4 +575,246 @@
             renderDots();
         });
     </script>
+    {{-- Testimonials Section --}}
+    <section id="testimonials" class="overflow-hidden bg-blue-50 px-4 py-20 sm:px-6 lg:px-8">
+        <div class="mx-auto max-w-7xl">
+            <div class="text-center">
+                <p class="inline-flex rounded-full bg-blue-100 px-4 py-1.5 text-sm font-bold text-blue-700">
+                    Testimoni
+                </p>
+
+                <h2 class="mt-4 text-3xl font-extrabold tracking-tight text-slate-950 sm:text-4xl">
+                    +58.824 Satisfied Students
+                </h2>
+
+                <p class="mx-auto mt-4 max-w-2xl text-base leading-7 text-slate-600">
+                    Kata mereka yang telah merasakan pengalaman belajar bersama Englishvit.
+                </p>
+            </div>
+
+            @php
+                $testimonials = [
+                    [
+                        'name' => 'Sugionoy',
+                        'role' => 'Employee',
+                        'text' => 'Saya semakin PD dalam speaking. Materinya dijelasin dengan santai dan selalu dimulai dengan obrolan yang akrab. Seru dan nyenengin banget.',
+                        'avatar' => 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=face',
+                    ],
+                    [
+                        'name' => 'Hadi Sucipto',
+                        'role' => 'Employee',
+                        'text' => 'Di pekerjaan saya dituntut untuk bisa berbahasa Inggris, dan di Englishvit saya semakin PD karena Grammar for Speaking class. Thank you Englishvit.',
+                        'avatar' => 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face',
+                    ],
+                    [
+                        'name' => 'Tri Puji Astuti',
+                        'role' => 'College Student',
+                        'text' => 'Sangat nyaman belajar di Englishvit. Materi disampaikan santai, mudah dipahami, dan banyak kesempatan praktik di setiap sesi.',
+                        'avatar' => 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&crop=face',
+                    ],
+                    [
+                        'name' => 'Rina Wulandari',
+                        'role' => 'Marketing Manager',
+                        'text' => 'Englishvit benar-benar mengubah cara saya belajar bahasa Inggris. Dari yang awalnya grogi berbicara, sekarang saya lebih percaya diri.',
+                        'avatar' => 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face',
+                    ],
+                    [
+                        'name' => 'Budi Santoso',
+                        'role' => 'Scholarship Hunter',
+                        'text' => 'Skor IELTS saya naik dengan latihan yang terarah. Pengajarnya sabar, profesional, dan feedback-nya sangat membantu.',
+                        'avatar' => 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face',
+                    ],
+                ];
+
+                $partners = ['BNEC', 'RS. BHINA', 'himatekk its', 'THENBLANK', 'SICEPAT'];
+            @endphp
+
+            <div class="relative mt-12">
+                <button
+                    type="button"
+                    id="testimonialPrev"
+                    class="absolute -left-4 top-1/2 z-20 hidden h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-white text-slate-700 shadow-lg ring-1 ring-slate-200 transition hover:bg-blue-600 hover:text-white lg:flex"
+                    aria-label="Previous testimonials"
+                >
+                    <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+                    </svg>
+                </button>
+
+                <div
+                    id="testimonialCarousel"
+                    class="flex snap-x snap-mandatory gap-5 overflow-x-auto scroll-smooth pb-6 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+                >
+                    @foreach ($testimonials as $testimonial)
+                        <article class="testimonial-card flex min-w-full snap-start flex-col rounded-2xl bg-white p-6 shadow-sm ring-1 ring-blue-100 transition duration-300 hover:-translate-y-1 hover:shadow-xl sm:min-w-[calc(50%-10px)] lg:min-w-[calc(33.333%-14px)]">
+                            <div class="flex items-center justify-between gap-4">
+                                <div class="flex items-center gap-1 text-blue-600">
+                                    @for ($i = 0; $i < 5; $i++)
+                                        <svg class="h-5 w-5 rounded bg-blue-600 p-0.5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                        </svg>
+                                    @endfor
+                                </div>
+
+                                <a href="#" class="inline-flex items-center gap-1 text-sm font-bold text-blue-600 hover:text-blue-700">
+                                    <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M6.3 2.84A1.5 1.5 0 004 4.11v11.78a1.5 1.5 0 002.3 1.27l9.33-5.89a1.5 1.5 0 000-2.54L6.3 2.84z" />
+                                    </svg>
+                                    Lihat video
+                                </a>
+                            </div>
+
+                            <p class="mt-7 flex-1 text-base leading-8 text-slate-700">
+                                “{{ $testimonial['text'] }}”
+                            </p>
+
+                            <div class="mt-8 flex items-center gap-3">
+                                <img
+                                    src="{{ $testimonial['avatar'] }}"
+                                    alt="{{ $testimonial['name'] }}"
+                                    class="h-12 w-12 rounded-full object-cover ring-4 ring-blue-50"
+                                >
+
+                                <div>
+                                    <h3 class="font-extrabold text-slate-800">
+                                        {{ $testimonial['name'] }}
+                                    </h3>
+                                    <p class="text-sm font-medium text-slate-500">
+                                        {{ $testimonial['role'] }}
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+                    @endforeach
+                </div>
+
+                <button
+                    type="button"
+                    id="testimonialNext"
+                    class="absolute -right-4 top-1/2 z-20 hidden h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-white text-slate-700 shadow-lg ring-1 ring-slate-200 transition hover:bg-blue-600 hover:text-white lg:flex"
+                    aria-label="Next testimonials"
+                >
+                    <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                    </svg>
+                </button>
+
+                <div id="testimonialDots" class="mt-4 flex justify-center gap-2"></div>
+            </div>
+
+            <div class="mt-20 text-center">
+                <h3 class="text-xl font-extrabold text-slate-950">
+                    250+ lembaga dan instansi telah menggunakan layanan kami
+                </h3>
+
+                <div class="mt-10 flex flex-wrap items-center justify-center gap-x-12 gap-y-8">
+                    @foreach ($partners as $partner)
+                        <div class="text-2xl font-black tracking-tight text-slate-500 grayscale transition hover:text-slate-900">
+                            {{ $partner }}
+                        </div>
+                    @endforeach
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const carousel = document.getElementById('testimonialCarousel');
+            const prevButton = document.getElementById('testimonialPrev');
+            const nextButton = document.getElementById('testimonialNext');
+            const dotsWrapper = document.getElementById('testimonialDots');
+
+            if (!carousel || !prevButton || !nextButton || !dotsWrapper) return;
+
+            const cards = Array.from(carousel.querySelectorAll('.testimonial-card'));
+
+            const getVisibleCards = () => {
+                if (window.innerWidth >= 1024) return 3;
+                if (window.innerWidth >= 640) return 2;
+                return 1;
+            };
+
+            const getCardStep = () => {
+                const firstCard = cards[0];
+                if (!firstCard) return 0;
+
+                const gap = parseFloat(getComputedStyle(carousel).columnGap || getComputedStyle(carousel).gap || 0);
+                return firstCard.getBoundingClientRect().width + gap;
+            };
+
+            const getPageCount = () => {
+                return Math.ceil(cards.length / getVisibleCards());
+            };
+
+            const getCurrentPage = () => {
+                const step = getCardStep() * getVisibleCards();
+                if (!step) return 0;
+
+                return Math.round(carousel.scrollLeft / step);
+            };
+
+            const scrollToPage = (pageIndex) => {
+                const maxPage = getPageCount() - 1;
+                const safePage = Math.max(0, Math.min(pageIndex, maxPage));
+
+                carousel.scrollTo({
+                    left: getCardStep() * getVisibleCards() * safePage,
+                    behavior: 'smooth',
+                });
+            };
+
+            const updateDots = () => {
+                const currentPage = getCurrentPage();
+                const dots = dotsWrapper.querySelectorAll('.testimonial-dot');
+
+                dots.forEach((dot, index) => {
+                    dot.className = index === currentPage
+                        ? 'testimonial-dot h-2.5 w-8 rounded-full bg-blue-600 transition-all'
+                        : 'testimonial-dot h-2.5 w-2.5 rounded-full bg-blue-200 transition-all hover:bg-blue-400';
+                });
+
+                prevButton.disabled = currentPage === 0;
+                nextButton.disabled = currentPage >= getPageCount() - 1;
+
+                prevButton.classList.toggle('opacity-40', prevButton.disabled);
+                nextButton.classList.toggle('opacity-40', nextButton.disabled);
+            };
+
+            const renderDots = () => {
+                dotsWrapper.innerHTML = '';
+
+                for (let index = 0; index < getPageCount(); index++) {
+                    const dot = document.createElement('button');
+                    dot.type = 'button';
+                    dot.className = 'testimonial-dot h-2.5 w-2.5 rounded-full bg-blue-200 transition-all hover:bg-blue-400';
+                    dot.setAttribute('aria-label', `Go to testimonial page ${index + 1}`);
+                    dot.addEventListener('click', () => scrollToPage(index));
+
+                    dotsWrapper.appendChild(dot);
+                }
+
+                updateDots();
+            };
+
+            prevButton.addEventListener('click', () => {
+                scrollToPage(getCurrentPage() - 1);
+            });
+
+            nextButton.addEventListener('click', () => {
+                scrollToPage(getCurrentPage() + 1);
+            });
+
+            carousel.addEventListener('scroll', () => {
+                window.requestAnimationFrame(updateDots);
+            });
+
+            window.addEventListener('resize', () => {
+                renderDots();
+                scrollToPage(0);
+            });
+
+            renderDots();
+        });
+    </script>
 @endsection
