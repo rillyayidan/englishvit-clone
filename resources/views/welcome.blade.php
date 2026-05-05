@@ -248,6 +248,7 @@
                         'discount' => '60%',
                         'oldPrice' => 'Rp830.000',
                         'button' => 'Lihat Kelas',
+                        'image' => 'https://cdn.englishvit.com/image/zt5ewKOLFY22ITbNFyx8ZRCCrKWE4FdMdR1G6ofD.png',
                     ],
                     [
                         'category' => 'English Test',
@@ -258,6 +259,7 @@
                         'discount' => null,
                         'oldPrice' => null,
                         'button' => 'Lihat Detail',
+                        'image' => 'https://englishvit.com/path/images/program/package/P0LAHO6mTQQ9SKVgjFjdjj5BoYJvjmSpb4wie36n.jpg',
                     ],
                     [
                         'category' => 'Learning Package',
@@ -268,6 +270,7 @@
                         'discount' => '50%',
                         'oldPrice' => 'Rp132.000',
                         'button' => 'Lihat Kelas',
+                        'image' => 'https://cdn.englishvit.com/image/3iUF5vgi9ebJjzqrJbltw3wdPBolfAxuzsQi1ggU.png',
                     ],
                     [
                         'category' => 'Live Class',
@@ -278,6 +281,7 @@
                         'discount' => '50%',
                         'oldPrice' => 'Rp825.000',
                         'button' => 'Lihat Kelas',
+                        'image' => 'https://englishvit.com/path/images/program/package/EjVVAzvOCqXyDjPJYxg7GuOQGgkInVy6OXL4yGsV.png',
                     ],
                     [
                         'category' => 'One on One',
@@ -288,6 +292,7 @@
                         'discount' => '35%',
                         'oldPrice' => 'Rp460.000',
                         'button' => 'Lihat Detail',
+                        'image' => 'https://cdn.englishvit.com/image/bs1roPq3ThvQ88NrFGBjVtN455i1caDrZM1doiqb.jpg',
                     ],
                     [
                         'category' => 'Live Class',
@@ -298,6 +303,7 @@
                         'discount' => '40%',
                         'oldPrice' => 'Rp315.000',
                         'button' => 'Lihat Kelas',
+                        'image' => 'https://cdn.englishvit.com/image/dXT1WPK7BiybrnWNXhF4SU4s2oCKNeQv4YFQ5hG0.jpg',
                     ],
                     [
                         'category' => 'Learning Package',
@@ -308,6 +314,7 @@
                         'discount' => '45%',
                         'oldPrice' => 'Rp452.000',
                         'button' => 'Lihat Detail',
+                        'image' => 'https://englishvit.com/path/images/program/package/RSaDQXd3V2jyiinp8mdtvicXX4NZtlRrviZ2SDWY.jpg',
                     ],
                     [
                         'category' => 'Certification Test',
@@ -318,6 +325,7 @@
                         'discount' => '30%',
                         'oldPrice' => 'Rp393.000',
                         'button' => 'Lihat Kelas',
+                        'image' => 'https://cdn.englishvit.com/image/zt5ewKOLFY22ITbNFyx8ZRCCrKWE4FdMdR1G6ofD.png',
                     ],
                     [
                         'category' => 'Smart Book',
@@ -328,6 +336,7 @@
                         'discount' => null,
                         'oldPrice' => null,
                         'button' => 'Lihat Detail',
+                        'image' => 'https://englishvit.com/path/images/program/package/P0LAHO6mTQQ9SKVgjFjdjj5BoYJvjmSpb4wie36n.jpg',
                     ],
                     [
                         'category' => 'Subscription',
@@ -338,6 +347,7 @@
                         'discount' => '25%',
                         'oldPrice' => 'Rp79.000',
                         'button' => 'Lihat Detail',
+                        'image' => 'https://cdn.englishvit.com/image/3iUF5vgi9ebJjzqrJbltw3wdPBolfAxuzsQi1ggU.png',
                     ],
                     [
                         'category' => 'Live Class',
@@ -348,10 +358,9 @@
                         'discount' => '35%',
                         'oldPrice' => 'Rp229.000',
                         'button' => 'Lihat Kelas',
+                        'image' => 'https://englishvit.com/path/images/program/package/EjVVAzvOCqXyDjPJYxg7GuOQGgkInVy6OXL4yGsV.png',
                     ],
                 ];
-
-                $programImage = 'https://cdn.englishvit.com/image/oyTL54lzJYcLQCiurRPQuFfSFzICBUpot15TLugc.webp';
             @endphp
 
             <div class="relative mt-12">
@@ -377,7 +386,7 @@
                             {{-- Real image --}}
                             <div class="h-44 overflow-hidden bg-slate-100">
                                 <img
-                                    src="{{ $programImage }}"
+                                    src="{{ $program['image'] }}"
                                     alt="{{ $program['title'] }}"
                                     class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
                                 >
