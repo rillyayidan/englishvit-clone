@@ -576,20 +576,48 @@
         });
     </script>
     {{-- Testimonials Section --}}
-    <section id="testimonials" class="overflow-hidden bg-blue-50 px-4 py-20 sm:px-6 lg:px-8">
+    <section id="testimonials" class="overflow-hidden bg-gradient-to-b from-slate-50 to-blue-50 px-4 py-20 sm:px-6 lg:px-8">
         <div class="mx-auto max-w-7xl">
-            <div class="text-center">
-                <p class="inline-flex rounded-full bg-blue-100 px-4 py-1.5 text-sm font-bold text-blue-700">
-                    Testimoni
-                </p>
+            {{-- Header --}}
+            <div class="grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">
+                <div>
+                    <span class="inline-flex rounded-full border border-blue-200 bg-white px-4 py-1.5 text-sm font-bold text-blue-700 shadow-sm">
+                        Testimoni Siswa
+                    </span>
 
-                <h2 class="mt-4 text-3xl font-extrabold tracking-tight text-slate-950 sm:text-4xl">
-                    +58.824 Satisfied Students
-                </h2>
+                    <h2 class="mt-5 text-3xl font-extrabold tracking-tight text-slate-950 sm:text-4xl lg:text-5xl">
+                        +58.824 Satisfied Students
+                    </h2>
 
-                <p class="mx-auto mt-4 max-w-2xl text-base leading-7 text-slate-600">
-                    Kata mereka yang telah merasakan pengalaman belajar bersama Englishvit.
-                </p>
+                    <p class="mt-4 max-w-2xl text-base leading-7 text-slate-600">
+                        Ribuan siswa telah merasakan pengalaman belajar yang lebih praktis, menyenangkan, dan relevan bersama Englishvit.
+                    </p>
+                </div>
+
+                <div class="grid gap-4 sm:grid-cols-2">
+                    <div class="rounded-2xl border border-white/70 bg-white/80 p-5 shadow-sm backdrop-blur">
+                        <p class="text-sm font-semibold text-slate-500">Average Rating</p>
+                        <div class="mt-2 flex items-center gap-2">
+                            <span class="text-2xl font-extrabold text-slate-950">4.9/5</span>
+                            <div class="flex items-center gap-1 text-amber-400">
+                                @for ($i = 0; $i < 5; $i++)
+                                    <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+                                @endfor
+                            </div>
+                        </div>
+                        <p class="mt-2 text-sm text-slate-500">Berdasarkan ribuan pengalaman belajar siswa.</p>
+                    </div>
+
+                    <div class="rounded-2xl border border-blue-100 bg-blue-600 p-5 text-white shadow-sm">
+                        <p class="text-sm font-semibold text-blue-100">Why they stay</p>
+                        <p class="mt-2 text-2xl font-extrabold">Practical & Friendly</p>
+                        <p class="mt-2 text-sm leading-6 text-blue-100">
+                            Metode belajar fokus pada praktik, bukan cuma teori.
+                        </p>
+                    </div>
+                </div>
             </div>
 
             @php
@@ -626,10 +654,56 @@
                     ],
                 ];
 
-                $partners = ['BNEC', 'RS. BHINA', 'himatekk its', 'THENBLANK', 'SICEPAT'];
+                $partners = [
+                    [
+                        'name' => 'BNEC',
+                        'image' => 'https://englishvit.com/image/partner/tnss/bnec.webp',
+                    ],
+                    [
+                        'name' => 'Bhina Bhakti Husada',
+                        'image' => 'https://englishvit.com/image/partner/tnss/bhina-bhakti-husada.webp',
+                    ],
+                    [
+                        'name' => 'Himatekk ITS',
+                        'image' => 'https://englishvit.com/image/partner/tnss/himatekkits.webp',
+                    ],
+                    [
+                        'name' => 'Thenblank',
+                        'image' => 'https://englishvit.com/image/partner/tnss/thenblank.webp',
+                    ],
+                    [
+                        'name' => 'Sicepat',
+                        'image' => 'https://englishvit.com/image/partner/tnss/sicepat.webp',
+                    ],
+                    [
+                        'name' => 'Indmira',
+                        'image' => 'https://englishvit.com/image/partner/tnss/indmira.webp',
+                    ],
+                    [
+                        'name' => 'PTPN',
+                        'image' => 'https://englishvit.com/image/partner/tnss/ptpn.webp',
+                    ],
+                    [
+                        'name' => 'ABP Amikom',
+                        'image' => 'https://englishvit.com/image/partner/tnss/abp-amikom.webp',
+                    ],
+                    [
+                        'name' => 'Detik',
+                        'image' => 'https://englishvit.com/image/partner/tnss/detik.webp',
+                    ],
+                    [
+                        'name' => 'G2',
+                        'image' => 'https://englishvit.com/image/partner/tnss/g2.webp',
+                    ],
+                    [
+                        'name' => 'Primafit',
+                        'image' => 'https://englishvit.com/image/partner/tnss/primafit.webp',
+                    ],
+                ];
             @endphp
 
-            <div class="relative mt-12">
+            {{-- Testimonial Carousel --}}
+            <div class="relative mt-14">
                 <button
                     type="button"
                     id="testimonialPrev"
@@ -643,32 +717,31 @@
 
                 <div
                     id="testimonialCarousel"
-                    class="flex snap-x snap-mandatory gap-5 overflow-x-auto scroll-smooth pb-6 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+                    class="flex snap-x snap-mandatory gap-6 overflow-x-auto scroll-smooth pb-6 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
                 >
                     @foreach ($testimonials as $testimonial)
-                        <article class="testimonial-card flex min-w-full snap-start flex-col rounded-2xl bg-white p-6 shadow-sm ring-1 ring-blue-100 transition duration-300 hover:-translate-y-1 hover:shadow-xl sm:min-w-[calc(50%-10px)] lg:min-w-[calc(33.333%-14px)]">
-                            <div class="flex items-center justify-between gap-4">
-                                <div class="flex items-center gap-1 text-blue-600">
+                        <article class="testimonial-card flex min-w-full snap-start flex-col rounded-[28px] border border-white/70 bg-white/85 p-7 shadow-lg shadow-blue-100/40 backdrop-blur transition duration-300 hover:-translate-y-1 hover:shadow-xl sm:min-w-[calc(50%-12px)] lg:min-w-[calc(33.333%-16px)]">
+                            <div class="flex items-start justify-between gap-4">
+                                <div class="flex items-center gap-1 text-amber-400">
                                     @for ($i = 0; $i < 5; $i++)
-                                        <svg class="h-5 w-5 rounded bg-blue-600 p-0.5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                        <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 20 20">
                                             <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                                         </svg>
                                     @endfor
                                 </div>
 
-                                <a href="#" class="inline-flex items-center gap-1 text-sm font-bold text-blue-600 hover:text-blue-700">
-                                    <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 20 20">
-                                        <path d="M6.3 2.84A1.5 1.5 0 004 4.11v11.78a1.5 1.5 0 002.3 1.27l9.33-5.89a1.5 1.5 0 000-2.54L6.3 2.84z" />
+                                <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-50 text-blue-600">
+                                    <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M7.17 6A4.17 4.17 0 003 10.17V12h4.83v5H3v1h6V10H5.05A2.95 2.95 0 018 7.05V6H7.17zm10 0A4.17 4.17 0 0013 10.17V12h4.83v5H13v1h6V10h-3.95A2.95 2.95 0 0118 7.05V6h-.83z"/>
                                     </svg>
-                                    Lihat video
-                                </a>
+                                </div>
                             </div>
 
-                            <p class="mt-7 flex-1 text-base leading-8 text-slate-700">
-                                “{{ $testimonial['text'] }}”
+                            <p class="mt-6 flex-1 text-base leading-8 text-slate-700">
+                                {{ $testimonial['text'] }}
                             </p>
 
-                            <div class="mt-8 flex items-center gap-3">
+                            <div class="mt-8 flex items-center gap-4 border-t border-slate-100 pt-5">
                                 <img
                                     src="{{ $testimonial['avatar'] }}"
                                     alt="{{ $testimonial['name'] }}"
@@ -676,10 +749,10 @@
                                 >
 
                                 <div>
-                                    <h3 class="font-extrabold text-slate-800">
+                                    <h3 class="font-extrabold text-slate-900">
                                         {{ $testimonial['name'] }}
                                     </h3>
-                                    <p class="text-sm font-medium text-slate-500">
+                                    <p class="text-sm text-slate-500">
                                         {{ $testimonial['role'] }}
                                     </p>
                                 </div>
@@ -699,20 +772,37 @@
                     </svg>
                 </button>
 
-                <div id="testimonialDots" class="mt-4 flex justify-center gap-2"></div>
+                <div id="testimonialDots" class="mt-5 flex justify-center gap-2"></div>
             </div>
 
-            <div class="mt-20 text-center">
-                <h3 class="text-xl font-extrabold text-slate-950">
-                    250+ lembaga dan instansi telah menggunakan layanan kami
-                </h3>
+            {{-- Partner Marquee --}}
+            <div class="mt-20">
+                <div class="text-center">
+                    <h3 class="text-2xl font-extrabold text-slate-950">
+                        Trusted by 250+ institutions & companies
+                    </h3>
+                    <p class="mt-3 text-slate-600">
+                        Sebagian partner yang telah menggunakan layanan Englishvit.
+                    </p>
+                </div>
 
-                <div class="mt-10 flex flex-wrap items-center justify-center gap-x-12 gap-y-8">
-                    @foreach ($partners as $partner)
-                        <div class="text-2xl font-black tracking-tight text-slate-500 grayscale transition hover:text-slate-900">
-                            {{ $partner }}
+                <div class="mt-10 overflow-hidden">
+                    <div class="partner-marquee">
+                        <div class="partner-track">
+                            @foreach (array_merge($partners, $partners) as $partner)
+                                <a
+                                    href="#"
+                                    class="partner-item flex h-20 min-w-[180px] items-center justify-center px-6 transition hover:scale-105"
+                                >
+                                <img
+                                    src="{{ $partner['image'] }}"
+                                    alt="{{ $partner['name'] }}"
+                                    class="max-h-14 w-auto object-contain transition duration-300 hover:scale-105"
+                                >
+                                </a>
+                            @endforeach
                         </div>
-                    @endforeach
+                    </div>
                 </div>
             </div>
         </div>
@@ -739,18 +829,17 @@
                 const firstCard = cards[0];
                 if (!firstCard) return 0;
 
-                const gap = parseFloat(getComputedStyle(carousel).columnGap || getComputedStyle(carousel).gap || 0);
+                const styles = getComputedStyle(carousel);
+                const gap = parseFloat(styles.gap || styles.columnGap || 0);
+
                 return firstCard.getBoundingClientRect().width + gap;
             };
 
-            const getPageCount = () => {
-                return Math.ceil(cards.length / getVisibleCards());
-            };
+            const getPageCount = () => Math.ceil(cards.length / getVisibleCards());
 
             const getCurrentPage = () => {
                 const step = getCardStep() * getVisibleCards();
                 if (!step) return 0;
-
                 return Math.round(carousel.scrollLeft / step);
             };
 
@@ -771,7 +860,7 @@
                 dots.forEach((dot, index) => {
                     dot.className = index === currentPage
                         ? 'testimonial-dot h-2.5 w-8 rounded-full bg-blue-600 transition-all'
-                        : 'testimonial-dot h-2.5 w-2.5 rounded-full bg-blue-200 transition-all hover:bg-blue-400';
+                        : 'testimonial-dot h-2.5 w-2.5 rounded-full bg-slate-300 transition-all hover:bg-blue-300';
                 });
 
                 prevButton.disabled = currentPage === 0;
@@ -784,26 +873,20 @@
             const renderDots = () => {
                 dotsWrapper.innerHTML = '';
 
-                for (let index = 0; index < getPageCount(); index++) {
+                for (let i = 0; i < getPageCount(); i++) {
                     const dot = document.createElement('button');
                     dot.type = 'button';
-                    dot.className = 'testimonial-dot h-2.5 w-2.5 rounded-full bg-blue-200 transition-all hover:bg-blue-400';
-                    dot.setAttribute('aria-label', `Go to testimonial page ${index + 1}`);
-                    dot.addEventListener('click', () => scrollToPage(index));
-
+                    dot.className = 'testimonial-dot h-2.5 w-2.5 rounded-full bg-slate-300 transition-all hover:bg-blue-300';
+                    dot.setAttribute('aria-label', `Go to testimonial page ${i + 1}`);
+                    dot.addEventListener('click', () => scrollToPage(i));
                     dotsWrapper.appendChild(dot);
                 }
 
                 updateDots();
             };
 
-            prevButton.addEventListener('click', () => {
-                scrollToPage(getCurrentPage() - 1);
-            });
-
-            nextButton.addEventListener('click', () => {
-                scrollToPage(getCurrentPage() + 1);
-            });
+            prevButton.addEventListener('click', () => scrollToPage(getCurrentPage() - 1));
+            nextButton.addEventListener('click', () => scrollToPage(getCurrentPage() + 1));
 
             carousel.addEventListener('scroll', () => {
                 window.requestAnimationFrame(updateDots);

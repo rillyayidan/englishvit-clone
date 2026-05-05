@@ -23,3 +23,28 @@
 .animate-float {
     animation: float 5s ease-in-out infinite;
 }
+@keyframes partner-marquee {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.partner-marquee {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.partner-track {
+    display: flex;
+    align-items: center;
+    width: max-content;
+    animation: partner-marquee 28s linear infinite;
+}
+
+.partner-marquee:hover .partner-track {
+    animation-play-state: paused;
+}
