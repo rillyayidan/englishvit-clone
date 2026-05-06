@@ -48,3 +48,30 @@
 .partner-marquee:hover .partner-track {
     animation-play-state: paused;
 }
+
+@keyframes media-marquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.media-marquee {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.media-track {
+    display: flex;
+    align-items: center;
+    width: max-content;
+    animation: media-marquee 26s linear infinite;
+}
+
+.media-marquee:hover .media-track {
+    animation-play-state: paused;
+}
