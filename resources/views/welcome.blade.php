@@ -36,7 +36,7 @@
                     </a>
 
                     <a
-                        href="#contact"
+                        href="https://englishvit.com/wa/intro/general" target="_blank"
                         class="inline-flex items-center justify-center gap-2 rounded-xl border border-white/40 bg-white/5 px-6 py-4 text-base font-bold text-white backdrop-blur transition hover:-translate-y-0.5 hover:bg-white/10"
                     >
                         <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
