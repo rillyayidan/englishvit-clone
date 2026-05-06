@@ -100,7 +100,7 @@
     </section>
     {{-- Study Program Section --}}
     <section id="programs" class="bg-white px-4 py-20 sm:px-6 lg:px-8">
-        <div class="mx-auto max-w-7xl">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div class="text-center">
                 <p class="text-sm font-bold uppercase tracking-[0.25em] text-blue-600">
                     Program Englishvit
@@ -1567,7 +1567,7 @@
         </div>
     </section>
     {{-- Blog Section --}}
-    <section id="blog" class="bg-white px-4 py-20 sm:px-6 lg:px-8">
+    <section id="blog" class="bg-white px-4 pt-20 pb-12 sm:px-6 lg:px-8">
         <div class="mx-auto max-w-7xl">
             <div class="mx-auto max-w-3xl text-center">
 
@@ -1658,4 +1658,5 @@
             </div>
         </div>
     </section>
+
 @endsection
